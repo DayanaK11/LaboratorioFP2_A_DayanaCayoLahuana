@@ -1,0 +1,34 @@
+package ejercicioResuelto01;
+import java.util.*;
+
+public class Main {
+	
+	int [][] notas; //arreglo bidimensional
+	static Scanner consola=new Scanner(System.in);
+	int n,m; //cantidad de filas y cantidad de columnas
+	
+	private void dimensionarArreglo() {
+		System.out.println("Ingrese la cantidad de filas: ");
+		n = consola.nextInt();
+		System.out.println("Ingrese la cantidad de columnas: ");
+		m = consola.nextInt();
+		
+		//dimensionamos arreglo
+		notas = new int [n][m];
+	}
+	
+	private void llenarArreglo() {
+		Random generador = new Random();
+		for(int fila = 0; fila<notas.length; fila++) {
+			for(int columna=0; columna < notas[fila].length; columna ++) {
+				notas[fila][columna] = generador.nextInt(20) + 1;
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+
+
+	}
+
+}
